@@ -1,0 +1,181 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+/*第一屏幕*/
+.one {
+    overflow: hidden;
+}
+.logo {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 100px;
+}
+.one .word {
+    margin-top: 50px;
+    text-align: center;
+}
+.one .word img {
+    margin:0 50px;
+    opacity: 0.2;
+    vertical-align: middle;
+    transition: margin 1s,opacity 1s;
+}
+.one.current .word img {
+    margin:0 10px;
+    opacity: 1;
+}
+.one .infor {
+    width: 772px;
+    height: 49px;
+    margin: 50px auto;
+    background: url("../images/info_1.png");
+}
+/*第二屏*/
+.two {
+    overflow: hidden;
+}
+.two > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.two .left {
+    width: 440px;
+}
+.two .right {
+    width: 635px;
+    height: 309px;
+    background: url("../images/info_2.png");
+}
+.two .left img:nth-last-child(1) {
+    transform: translate(100px,-100px) rotate(30deg);
+}
+.two .left img:nth-last-child(2) {
+    transform: translate(-100px,-100px) rotate(90deg);
+}
+.two .left img:nth-last-child(3) {
+    transform: translate(-100px,100px) rotate(-30deg);
+}
+.two .left img:nth-last-child(4) {
+    transform: translate(150px,-150px) rotate(-90deg);
+}
+.two .left img:nth-last-child(5) {
+    transform: translate(-150px,-100px) rotate(120deg);
+}
+.two .left img:nth-last-child(6) {
+    transform: translate(100px,-80px) rotate(-120deg);
+}
+.two .left img:nth-last-child(7) {
+    transform: translate(100px,-100px) rotate(60deg);
+}
+.two .left img:nth-last-child(8) {
+    transform: translate(-90px,-100px) rotate(-60deg);
+}
+.two .left img:nth-last-child(9) {
+    transform: translate(100px,-100px) rotate(-180deg);
+}
+.two .left img {
+    transition: transform 1s;
+}
+.two.current .left img {
+    transform: none;
+}
+/*第三屏*/
+.three {
+    /*width: 100%;*/
+    position: relative;
+    overflow: hidden;
+
+}
+.three .left {
+    width: 631px;
+    height: 278px;
+    background: url("../images/info_3.png");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%,-50%);
+}
+.three .right {
+    width: 453px;
+    height: 449px;
+    background:url("../images/circle.png");
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(120%,-50%);
+}
+.three .right .rocket {
+    width: 203px;
+    height: 204px;
+    background: url("../images/rocket.png");
+    position: absolute;
+    left: -600px;
+    top: 650px;
+    transition: left 1s ,top 1s;
+}
+.three.current .right .rocket {
+    top: 120px;
+    left: 120px;
+}
+/*第四屏*/
+.four {
+    position: relative;
+}
+.four .search {
+    width: 529px;
+    height: 438px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-120%,-50%);
+    overflow: hidden;
+}
+.four .search .search_bar {
+    width: 529px;
+    height: 66px;
+    background: url("../images/search.png");
+    position: absolute;
+    position: relative;
+    top: 0;
+    left: -529px;
+}
+.four .search .text {
+    width: 0;
+    height: 22px;
+    background: url("../images/key.png");
+    position: absolute;
+    top: 22px;
+    left: 15px;
+
+}
+.four .search .search_box {
+    width: 529px;
+    height: 0;
+    margin-top:-12px;
+    background: url("../images/result.png");
+}
+.four .infor {
+    width: 612px;
+    height: 229px;
+    background: url("../images/info_4.png");
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(100%,-50%);
+}
+/*动画部分*/
+.four.current .search .search_bar {
+    transition: left 1s;
+    left: 0;
+}
+.four.current .search .text {
+    transition: width 1s 1s steps(5);
+    width: 100px;
+}
+.four.current .search .search_box {
+    transition: height 1s 2s;
+    height: 372px;
+}
